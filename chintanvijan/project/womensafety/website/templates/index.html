@@ -1,0 +1,49 @@
+<html>
+{% load static %}
+	<head>
+		<meta name="viewport" content="initial-scale=1.0, width=device-width" />
+		<!-- Latest compiled and minified CSS -->
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+
+		<!-- jQuery library -->
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+
+		<!-- Latest compiled JavaScript -->
+		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+	</head>
+	<body onload="getLocation()" style='background-image: url({% static "media/download.jpg" %});'>
+	<div class="container-fluid">
+		<div class="col-sm-2 col-md-8 col-lg-12 col-xl-6 center-block" align="center" style="margin-top:300px;">
+			<div class="row">
+		<form action="{% url 'home' %}" method="POST">
+			{% csrf_token %}
+			<input type="hidden" name="latitude" id="latitude">
+			<input type="hidden" name="longitude" id="longitude">
+			<button type="submit" class="btn btn-danger">Generate Request</button>
+		</form>
+	</div>
+	<div class="row">
+		<form action="{% url 'viewhome' %}">
+			<button type="submit" class="btn btn-danger">View Requests</button>
+		</form>
+	</div>
+	</div>
+	</div>
+		<script language="javascript">
+			 var x = document.getElementById("latitude");
+			 var y = document.getElementById("longitude");
+    function getLocation() {
+      if (navigator.geolocation) {
+        navigator.geolocation.getCurrentPosition(showPosition);
+      } else {
+        x.innerHTML = "Geolocation is not supported by this browser.";
+      }
+    }
+
+    function showPosition(position) {
+      x.value = position.coords.latitude;
+      y.value = position.coords.longitude;
+    }
+		</script>
+	</body>
+</html>
