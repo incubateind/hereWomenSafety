@@ -21,10 +21,12 @@ Usage -
   --So, any woman can generate request in a quick succession.
 
 
-How to test ?
+How to test ?(python 3.6)
   -- Clone the repo
   -- go into project directory 
   -- install requirements into your virtual env
+  -- run command - 'python manage.py makemigrations'
+  -- run command - 'python manage.py migrations'
   -- run command - 'python manage.py runserver'
   -- open your browser and navigate to 'localhost:8000'
   
