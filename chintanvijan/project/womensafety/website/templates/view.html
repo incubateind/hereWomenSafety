@@ -1,0 +1,79 @@
+<html>
+  <head>
+  <meta name="viewport" content="initial-scale=1.0, width=device-width" />
+  <!-- Latest compiled and minified CSS -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+
+<!-- jQuery library -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+
+<!-- Latest compiled JavaScript -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+  <link rel="stylesheet" type="text/css" href="https://js.api.here.com/v3/3.1/mapsjs-ui.css" />
+  <script src="https://js.api.here.com/v3/3.1/mapsjs-core.js"
+  type="text/javascript" charset="utf-8"></script>
+  <script src="https://js.api.here.com/v3/3.1/mapsjs-service.js"
+  type="text/javascript" charset="utf-8"></script>
+   <script type="text/javascript" src="https://js.api.here.com/v3/3.1/mapsjs-ui.js"></script>
+    <script type="text/javascript" src="https://js.api.here.com/v3/3.1/mapsjs-mapevents.js"></script>
+  </head>
+  <body>
+  <div style="width: 100%; height: 100%" id="mapContainer" class="container"></div>
+  <div id="demo"></div>
+  {% for i in loc %}
+  <input type="text" id="lat" value="{{i.latitude}}" name="lat"/>
+  <input type="text" id="lon" value="{{i.longitude}}" name="lon"/>
+  {% endfor %}
+  <script>
+  	 var t1 = document.getElementsByName("lat");
+			 var t2 = document.getElementsByName("lon");
+       var x =[];
+       var y =[];
+       for (var i=0, n=t1.length;i<n;i++) {
+  x.push(t1[i].value);
+}
+for (var i=0, n=t2.length;i<n;i++) {
+  y.push(t2[i].value);
+}
+console.log(x);
+			 function addMarkersToMap(map) {
+            var parisMarker,i,j;
+            for(i=0;x.length;i++){
+			     parisMarker = new H.map.Marker({lat:x[i], lng:y[i]});
+			     map.addObject(parisMarker);
+         }
+			 }
+
+			 //console.log(x);
+    // Initialize the platform object:
+    var platform = new H.service.Platform({
+    'apikey': 'owIV_wlfbO08GYEiQFwDS2Gh_6NtWOw_EE077fOi3iE'
+    });
+
+    // Obtain the default map types from the platform object
+    var maptypes = platform.createDefaultLayers();
+
+    // Instantiate (and display) a map object:
+    var map = new H.Map(
+    document.getElementById('mapContainer'),
+    maptypes.vector.normal.map,
+    {
+      zoom: 16,
+      center: { lng: y[0], lat: x[0] }
+    });
+
+   window.addEventListener('resize', () => map.getViewPort().resize());
+
+   var behavior = new H.mapevents.Behavior(new H.mapevents.MapEvents(map));
+
+// Create the default UI components
+var ui = H.ui.UI.createDefault(map, maptypes);
+
+// Now use the map as required...
+window.onload = function () {
+  addMarkersToMap(map);
+} 
+
+  </script>
+  </body>
+</html>
