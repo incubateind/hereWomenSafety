@@ -1,0 +1,523 @@
+@import url('https://free.bboxtype.com/embedfonts/?family=FiraGO:300,500,600,700');
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'FiraGO', sans-serif;
+    background-color: #f8f8f8;
+}
+
+a {
+    text-decoration: inherit;
+    color: inherit;
+    cursor: pointer;
+}
+
+.wrapper {
+    margin-top: 86px;
+}
+
+
+/* Navigation Bar Custom Here CSS */
+
+.logo {
+    width: 48px;
+    display: inline-block;
+}
+
+.logo img {
+    width: 100%;
+}
+
+.outter-navbar-here {
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 9999;
+    background-color: #fff;
+}
+
+.navbar-here {
+    display: inline-block;
+    width: calc(100% - 53px);
+    font-size: 14px;
+}
+
+.nav-content-here {
+    display: inline-block;
+    padding: 0 44px;
+    max-width: 24.5%;
+    width: max-content;
+}
+
+.nav-last {
+    padding-left: 44px !important;
+    padding-right: 0px !important;
+}
+
+.inside-nav-content-here {
+    padding: 30px 0;
+    font-weight: 300;
+}
+
+.bottom-border-here {
+    border-bottom: 4px solid white;
+}
+
+.nav-content-here:hover>.bottom-border-here {
+    border-bottom: 4px solid #01a39c;
+    transition: all 0.4s;
+}
+
+.nav-content-here:hover>.inside-nav-content-here {
+    font-weight: 500;
+    color: #01a39c;
+}
+
+
+/* Header Video */
+
+header {
+    position: relative;
+    background-color: black;
+    height: 75vh;
+    min-height: 25rem;
+    width: 100%;
+    overflow: hidden;
+}
+
+header video {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    min-width: 100%;
+    min-height: 100%;
+    width: auto;
+    height: auto;
+    z-index: 0;
+    -ms-transform: translateX(-50%) translateY(-50%);
+    -moz-transform: translateX(-50%) translateY(-50%);
+    -webkit-transform: translateX(-50%) translateY(-50%);
+    transform: translateX(-50%) translateY(-50%);
+}
+
+header .container {
+    position: relative;
+    z-index: 2;
+}
+
+header .overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background-color: black;
+    opacity: 0.5;
+    z-index: 1;
+}
+
+@media (pointer: coarse) and (hover: none) {
+    header {
+        background: url('../images/Stock.jpg') black no-repeat center center scroll;
+    }
+    header video {
+        display: none;
+    }
+}
+
+
+/* Here Theme Button */
+
+.here-theme-button,
+.here-theme-button:active {
+    color: #3f454d;
+    background-color: #48DAD0;
+    background-image: linear-gradient(to left, #48DAD0, #F5B086);
+    border-radius: 24px;
+    border: 0;
+    padding: 14px 30px;
+    font-size: 14px;
+    font-weight: 500;
+    text-align: center;
+    margin: 10px;
+    min-width: 260px;
+    outline: none;
+}
+
+.here-theme-button:hover,
+.here-theme-button:focus {
+    background-color: #48DAD0;
+    background-image: linear-gradient(to left, #48DAD0, #A4C3FF);
+    transition: 0.5s all;
+    outline: none;
+}
+
+.here-theme-button-2,
+.here-theme-button-2:active {
+    border: 2px solid #48DAD0;
+    color: #35393d;
+    background-color: #f8f8f8;
+    padding: 14px 30px;
+    border-radius: 50px;
+    font-size: 16px;
+    font-weight: 500;
+    text-align: center;
+    width: 100%;
+    outline: none;
+}
+
+.here-theme-button-2:hover,
+.here-theme-button-2:focus {
+    background-color: #48DAD0;
+    transition: 0.5s all;
+    outline: none;
+    border: 0;
+}
+
+.here-theme-button-3,
+.here-theme-button-3:active {
+    border: 2px solid #48DAD0;
+    color: #fff;
+    background-color: #none;
+    padding: 8px 20px;
+    border-radius: 50px;
+    font-size: 16px;
+    font-weight: 500;
+    text-align: center;
+    outline: none;
+}
+
+.here-theme-button-3:hover,
+.here-theme-button-3:focus {
+    background-color: #48DAD0;
+    transition: 0.5s all;
+    outline: none;
+}
+
+.header-spacing {
+    padding-top: 72px;
+    padding-bottom: 72px;
+}
+
+.custom-here-h2 {
+    font-size: 21px;
+    color: #35393d;
+    font-weight: 500;
+    letter-spacing: 0.4px;
+    line-height: 34px;
+    text-align: center;
+}
+
+
+/* Heavy Duty Division */
+
+.div-1 {
+    position: relative;
+    background-image: url(../images/challenge.jpg);
+    background-size: cover;
+    /* padding: 20vh 0; */
+    padding: 16vh 0;
+}
+
+.div-2 {
+    position: absolute;
+    /* top: 60px; */
+    top: 0px;
+    left: 10%;
+}
+
+.div-3 {
+    position: absolute;
+    top: 28vh;
+    background-color: #48DAD0;
+    background-image: linear-gradient(to left bottom, #48DAD0, #F5B086);
+    width: 60vw;
+}
+
+.div-4 {
+    position: relative;
+    background: #fff;
+    top: -10px;
+    left: -10px;
+    width: 60vw;
+    padding: 30px;
+}
+
+.div-1 p {
+    color: #fff;
+    font-size: 21px;
+    letter-spacing: 0.5px;
+    font-weight: 400;
+}
+
+.div-4 p {
+    font-size: 14px;
+    color: #35393d;
+    font-weight: 300;
+    margin: 0;
+}
+
+.div-4 h3 {
+    font-size: 20px;
+    color: #35393d;
+    font-weight: 500;
+}
+
+.outer-flap {
+    background-color: #f8f8f8;
+    height: 100%;
+    text-align: center;
+}
+
+.inner-flap-1 img {
+    width: 100%;
+}
+
+.inner-flap-2 h4 {
+    font-size: 18px;
+    font-weight: 500;
+}
+
+.inner-flap-2 h5 {
+    font-size: 12px;
+    font-weight: 300;
+}
+
+.disable-button {
+    background-color: #d0d0d0;
+    border: 0;
+    color: #fff;
+}
+
+.disable-button:hover {
+    background-color: #bbbbbb !important;
+    border: 0 !important;
+    color: #fff !important;
+    cursor: not-allowed;
+}
+
+.outer-flap:hover {
+    background-color: #f3f3f3;
+}
+
+
+/* Offline Hackathon */
+
+
+/*
+Removes white gap between slides - chagnge to base color of slide images
+*/
+
+.carousel {
+    background: #35393d;
+}
+
+.carousel h2,
+.carousel p {
+    letter-spacing: 0.5px;
+}
+
+
+/*
+  Forces image to be 100% width and not max width of 100%
+  */
+
+.carousel-item .img-fluid {
+    width: 100%;
+}
+
+
+/* 
+  anchors are inline so you need ot make them block to go full width
+  */
+
+.carousel-item a {
+    display: block;
+    width: 100%;
+}
+
+
+/* FAQ Accordian */
+
+.accordion .card-header {
+    cursor: pointer;
+}
+
+.accordion.heading-right .card-title {
+    position: absolute;
+    right: 50px;
+}
+
+.accordion.indicator-plus .card-header:after {
+    font-family: "FontAwesome";
+    content: "\f068";
+    float: right;
+}
+
+.accordion.indicator-plus .card-header.collapsed:after {
+    content: "\f067";
+}
+
+.accordion.indicator-plus-before.round-indicator .card-header:before {
+    font-family: "FontAwesome";
+    font-size: 14pt;
+    content: "\f056";
+    margin-right: 10px;
+    color: #35393d;
+}
+
+.accordion.indicator-plus-before.round-indicator .card-header.collapsed:before {
+    content: "\f055";
+    color: #48DAD0;
+}
+
+.accordion.indicator-plus-before .card-header:before {
+    font-family: "FontAwesome";
+    content: "\f068";
+    float: left;
+}
+
+.accordion.indicator-plus-before .card-header.collapsed:before {
+    content: "\f067";
+}
+
+.accordion.indicator-chevron .card-header:after {
+    font-family: "FontAwesome";
+    content: "\f078";
+    float: right;
+}
+
+.accordion.indicator-chevron .card-header.collapsed:after {
+    content: "\f077";
+}
+
+.accordion.background-none [class^="card"] {
+    background: transparent;
+}
+
+.accordion.border-0 .card {
+    border: 0;
+}
+
+.card-body {
+    font-size: 14px;
+    font-weight: 300;
+}
+
+
+/* Footer */
+
+footer {
+    background-color: #35393d;
+    padding-top: 72px;
+    padding-bottom: 72px;
+    color: #62656a;
+}
+
+footer h5 {
+    color: #aeb3bd;
+    text-transform: uppercase;
+    letter-spacing: .1em;
+    margin-bottom: 20px;
+}
+
+footer p {
+    font-size: 12px;
+    font-weight: 300;
+    color: #62656a;
+    text-align: justify;
+    padding: 0px;
+}
+
+footer li {
+    font-size: 14px;
+    font-weight: 300;
+    letter-spacing: .05em;
+    line-height: 1.5;
+    margin-bottom: 10px;
+}
+
+footer a {
+    color: #62656a;
+}
+
+footer a:hover {
+    color: #90B3FF;
+    text-decoration: none;
+}
+
+footer i {
+    font-size: 25px;
+    color: #62656a;
+    margin-right: 10px;
+}
+
+footer i:hover {
+    color: #90B3FF;
+}
+
+footer small {
+    color: #62656a;
+    float: right;
+}
+
+.external-links {
+    color: #90B3FF;
+}
+
+
+/* ==============================================
+   9. Media Queries
+===============================================*/
+
+
+/* Extra small devices (portrait phones, less than 576px) */
+
+@media (max-width: 575.98px) {
+    h2 {
+        font-size: 34px!important;
+        margin-bottom: 20px;
+        line-height: 1.1;
+        /* text-align: center; */
+    }
+    .title-block h2,
+    p {
+        text-align: center;
+        padding: 0px 20px;
+    }
+    #call-to-action h2,
+    p {
+        text-align: center;
+        padding: 0 20px;
+    }
+    #call-to-action {
+        /* background-image: none; */
+        /* background-color: #58d7be; */
+    }
+    footer {
+        padding: 60px 25px;
+    }
+    footer h5 {
+        font-size: 18px;
+        margin-top: 30px;
+    }
+    footer li {
+        font-size: 16px;
+        margin-bottom: 15px;
+    }
+    footer p {
+        font-size: 16px;
+    }
+    footer i {
+        font-size: 30px;
+        margin-right: 20px;
+    }
+    footer small {
+        float: left;
+        margin-top: 20px;
+    }
+}
