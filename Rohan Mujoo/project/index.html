@@ -1,0 +1,38 @@
+<html>
+<head>
+
+</head>
+<body>
+  <h1>React Now</h1>
+  <div style="margin:0 10%;">
+    <div style="width: 100%; height: 480px" id="mapContainer"></div>
+
+  </div>
+
+  <script src="https://js.api.here.com/v3/3.1/mapsjs-core.js"
+  type="text/javascript" charset="utf-8"></script>
+<script src="https://js.api.here.com/v3/3.1/mapsjs-service.js"
+  type="text/javascript" charset="utf-8"></script>
+  <script>
+  let api = "AKLZUKc_NfUXOBES1Qiydf4vdF4JMYxX9eGaG_vh1Rw"
+  // Initialize the platform object:
+  var platform = new H.service.Platform({
+    'apikey': api
+    });
+
+    // Obtain the default map types from the platform object
+    var maptypes = platform.createDefaultLayers();
+
+    // Instantiate (and display) a map object:
+    var map = new H.Map(
+    document.getElementById('mapContainer'),
+    maptypes.vector.normal.map,
+    {
+      zoom: 10,
+      center: { lng: 15.4, lat: 52.51 }
+    });
+  </script>
+</body>
+</html> 
+</body>
+</html>
